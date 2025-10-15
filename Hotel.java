@@ -1,32 +1,34 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Hotel {
-    private ArrayList<Kamar> daftarKamar;
+    private final List<Kamar> daftarKamar;
 
     public Hotel() {
-        daftarKamar = new ArrayList<>();
+        this.daftarKamar = new ArrayList<>();
     }
 
     public void tambahKamar(Kamar kamar) {
-        daftarKamar.add(kamar);
+        this.daftarKamar.add(kamar);
+    }
+
+    public List<Kamar> getDaftarKamar() {
+        return daftarKamar;
     }
 
     public Kamar cariKamarKosong(String tipe) {
         for (Kamar kamar : daftarKamar) {
-            if (!kamar.isStatus() && kamar.getipekamar().equalsIgnoreCase(tipe)) {
-                return kamar;
+            if (!kamar.isDipesan()) {
+                if (kamar.getTipeKamar().equalsIgnoreCase(tipe)) {
+                    return kamar;
+                }
             }
         }
         return null;
     }
 
-    public double hitungTotalBayar(Tamu t, Kamar k) {
-        return t.getDurasiMenginap() * k.getHargaPerMalam();
-    }
-
-    public void tampilkanDaftarKamar() {
-        for (Kamar kamar : daftarKamar) {
-            System.out.println(kamar.infoKamar());
-        }
+    public double hitungTotalBayar(Tamu tamu, Kamar kamar) {
+        return tamu.getDurasiMenginap() * kamar.getHargaPerMalam();
     }
 }
+
