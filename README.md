@@ -1,12 +1,22 @@
-# Sistem Pemesanan Kamar Hotel (Java)
+# Sistem Pemesanan Kamar Hotel (Java) kelompok 14 uts Komputer Pemrograman
 
 Aplikasi console sederhana untuk simulasi pemesanan kamar hotel.
 
-## Struktur Kelas
+# Studi kasus
+Hotel ingin membuat sistem untuk mengelola pemesanan kamar oleh tamu dengan berbagai tipe kamar.
+
+# Anggota Kelompok
+1. Fitria Wulandini (G1A025084)
+2. ⁠Reyvano Arya Pulunggono (G1A022094)
+
+# Struktur Kelas
 - `Kamar`: nomorKamar, tipeKamar, hargaPerMalam, status; `pesanKamar()`, `kosongkanKamar()`
 - `Tamu`: nama, durasiMenginap; constructor + getter/setter
 - `Hotel`: `daftarKamar`, `cariKamarKosong(tipe)`, `hitungTotalBayar(tamu, kamar)`
 - `Main`: simulasi pemesanan dan tampilan status kamar. Mendukung skenario interaktif.
+
+## Overview
+Studi kasus sistem pemesanan kamar hotel dalam Java ini mensimulasikan proses pengelolaan kamar menggunakan konsep OOP. Sistem terdiri dari kelas Kamar, Tamu, Hotel, dan Main. Kelas Kamar menyimpan data nomor, tipe, harga, dan status kamar; Tamu menyimpan nama serta durasi menginap; sedangkan Hotel mengelola daftar kamar, mencari kamar kosong, memesan, mengosongkan, dan menghitung total pembayaran. Kelas Main menjadi antarmuka interaktif berbasis konsol yang menampilkan menu untuk simulasi pemesanan dan status kamar. Program ini menekankan penerapan prinsip OOP seperti enkapsulasi dan komposisi dalam konteks manajemen kamar hotel yang sederhana namun fungsional.
 
 ## Prasyarat
 - Windows + PowerShell
@@ -98,3 +108,4 @@ javac -version
 
 ### Catatan PowerShell (PSReadLine)
 - Menggunakan piping input (mis. `echo Y | java ...`) dapat memicu bug PSReadLine pada beberapa versi. Jalankan `java -cp out Main` tanpa piping, lalu ketik input langsung di prompt program.
+
